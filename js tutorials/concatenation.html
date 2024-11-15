@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>Press me</button>
+    <div id="greeting"></div>
+    <script>
+      const button = document.querySelector("button");
+
+      function greet() {
+        const name = prompt("What is your name?");
+        const greeting = document.querySelector("#greeting");
+        greeting.textContent = `Hello ${name}, nice to meet you!`;
+      }
+
+      button.addEventListener("click", greet);
+
+      const greeting = "Hello";
+      const name = "Rhex";
+      console.log(`${greeting}, ${name}`);
+
+      const song = "Fight the Youth";
+      const score = "9";
+      const highScore = "10";
+      const output = `I like the song ${song}. I gave it a score of ${
+        (score / highScore) * 100
+      }%.`;
+      console.log(output);
+
+      const newLine = `One day you finally knew 
+      what you had to do, and began,`; //linebreak exaple
+      console.log(newLine);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const string = "The revolution will not be televised";
+      console.log(string);
+
+      const badString = string;
+      console.log(badString); //works becuase variable "string" is declared
+
+      const single = "Single quotes"; // single or double is the same but be consistent
+      const double = "Double quotes";
+      const backtick = `Backtick`; //embeding variables or expression
+
+      console.log(single);
+      console.log(double);
+      console.log(backtick);
+
+      const name = "Rhex";
+      const greet = `hello, ${name}`; //embeded varible named "name"
+
+      console.log(greet);
+
+      const one = "Hello";
+      const two = "how are you";
+      const joined = `${one} ${two}`;
+
+      console.log(joined);
+    </script>
+  </body>
+</html>
