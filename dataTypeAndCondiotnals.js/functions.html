@@ -18,20 +18,20 @@
         the function passed as a argument*/
 
       const myText = "I am a string";
-      const newString = myText.replace("string", "sausage");
+      const newString = myText.replace("string", "sausage"); // needs two parameter
       console.log(newString);
       // the replace() string function takes a source string,
       // and a target string and replaces the source string,
       // with the target string, and returns the newly formed string
 
       const myArray = ["I", "love", "chocolate", "frogs"];
-      const madeAString = myArray.join(" ");
+      const madeAString = myArray.join(" "); //function with optional parameter
       console.log(madeAString);
       // the join() function takes an array, joins
       // all the array items together into a single
       // string, and returns this new string
 
-      const myNumber = Math.random();
+      const myNumber = Math.random(); //dont need parameters becuase it generates random number
       // the random() function generates a random number between
       // 0 and up to but not including 1, and returns that number
 
@@ -41,6 +41,17 @@
 
       myFunction();
       // calls the function once
+
+      let name = prompt("what is your name?");
+      alert(`hello, ${name}`);
+
+      function greet(name = "World!") {
+        //function with defualt parameter
+        console.log(`Hello, ${name}`);
+      }
+
+      greet("Rhex"); // Hello, Rhex
+      greet(); // Hello, World!
     </script>
   </body>
 </html>
