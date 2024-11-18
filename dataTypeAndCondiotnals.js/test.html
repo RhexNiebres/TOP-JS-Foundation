@@ -7,16 +7,53 @@
   </head>
   <body>
     <script>
-      let x = prompt("what is x");
-      let y = prompt("what is y");
-
-      if (x > y) {
-        alert(`${x} is greater than ${y}`);
-      } else if (x < y) {
-        alert(`${x} is less than ${y}`);
-      } else if (x == y) {
-        alert(`${x} is equal to ${y}`);
+      function showMessage() { //declare function and parameters within "()"
+        alert( 'Hello everyone!' );
       }
+
+      showMessage();// executes the function twice
+      showMessage(); // avoid this
+
+      function showMessage() {
+        let message = "Hello, I'm JavaScript!"; // local variable
+
+        alert( message );
+      }
+
+      showMessage(); // Hello, I'm JavaScript!
+
+      alert( message ); // <-- Error! The variable is local to the function
+
+
+      let userName = 'John'; // outer varible
+
+      function showMessage() {
+        let message = 'Hello, ' + userName;
+        alert(message);
+      }
+
+      showMessage(); // Hello, John
+
+
+      let userName1 = 'John'; //The function has full access to 
+      //the outer variable. It can modify it as well.
+
+function showMessage() {
+  userName1 = "Bob"; // (1) changed the outer variable
+
+      let message1 = 'Hello, ' + userName1;
+        alert(message1);
+      }
+
+      alert( userName1 ); // John before the function call
+
+      showMessage();
+
+      alert( userName1 ); // Bob, the value was modified by the function
+
+
+      
+    </script>
     </script>
   </body>
 </html>
