@@ -12,3 +12,6 @@ precedence of logical operators is what will be run first
 
 parameters == variable
 arguments == value
+
+A parameter is the variable listed inside the parentheses in the function declaration (it’s a declaration time term).
+An argument is the value that is passed to the function when it is called (it’s a call time term).

@@ -63,6 +63,14 @@
       showMessage5();
 
       alert(userName5); // John, unchanged, the function did not access the outer variable
+
+      function showMessage(from, text) {
+        // parameters: from, text
+        alert(from + ": " + text);
+      }
+
+      showMessage("Ann", "Hello!"); // Ann: Hello! (*)
+      showMessage("Ann", "What's up?"); // Ann: What's up? (**)
     </script>
   </body>
 </html>
