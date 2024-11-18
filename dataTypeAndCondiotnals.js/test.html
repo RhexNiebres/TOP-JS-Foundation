@@ -7,53 +7,62 @@
   </head>
   <body>
     <script>
-      function showMessage() { //declare function and parameters within "()"
-        alert( 'Hello everyone!' );
+      function showMessage1() {
+        //declare function and parameters within "()"
+        alert("Hello everyone!");
       }
 
-      showMessage();// executes the function twice
-      showMessage(); // avoid this
+      showMessage1(); // executes the function twice
+      showMessage1(); // avoid this
 
-      function showMessage() {
-        let message = "Hello, I'm JavaScript!"; // local variable
+      function showMessage2() {
+        let message2 = "Hello, I'm JavaScript!"; // local variable
 
-        alert( message );
+        alert(message2);
       }
 
-      showMessage(); // Hello, I'm JavaScript!
+      showMessage2(); // Hello, I'm JavaScript!
 
-      alert( message ); // <-- Error! The variable is local to the function
+      alert(message2); // <-- Error! The variable is local to the function
 
+      let userName3 = "John"; // outer varible
 
-      let userName = 'John'; // outer varible
-
-      function showMessage() {
-        let message = 'Hello, ' + userName;
-        alert(message);
+      function showMessage3() {
+        let message3 = "Hello, " + userName3;
+        alert(message3);
       }
 
-      showMessage(); // Hello, John
+      showMessage3(); // Hello, John
 
-
-      let userName1 = 'John'; //The function has full access to 
+      let userName4 = "John"; //The function has full access to
       //the outer variable. It can modify it as well.
 
-function showMessage() {
-  userName1 = "Bob"; // (1) changed the outer variable
+      function showMessage4() {
+        userName4 = "Bob"; // (1) changed the outer variable
 
-      let message1 = 'Hello, ' + userName1;
-        alert(message1);
+        let message4 = "Hello, " + userName4;
+        alert(message4);
       }
 
-      alert( userName1 ); // John before the function call
+      alert(userName4); // John before the function call
 
-      showMessage();
+      showMessage4();
 
-      alert( userName1 ); // Bob, the value was modified by the function
+      alert(userName4); // Bob, the value was modified by the function
 
+      let userName5 = "John";
 
-      
-    </script>
+      function showMessage5() {
+        let userName5 = "Bob"; // declare a local variable
+
+        let message5 = "Hello, " + userName5; // Bob
+        alert(message5);
+      }
+
+      // the function will create and use its own userName
+      showMessage5();
+
+      alert(userName5); // John, unchanged, the function did not access the outer variable
     </script>
   </body>
 </html>
