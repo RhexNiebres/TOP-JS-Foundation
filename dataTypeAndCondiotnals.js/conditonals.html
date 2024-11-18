@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let year1 = prompt(
+        "In which year was the ECMAScript-2015 specification published?",
+        ""
+      );
+
+      if (year1 == 2015) {
+        alert("You guessed it right!");
+      } else {
+        alert("How can you be so wrong?"); // any value except 2015
+      }
+
+      let year = prompt(
+        "In which year was the ECMAScript-2015 specification published?",
+        ""
+      );
+
+      if (year < 2015) {
+        alert("Too early...");
+      } else if (year > 2015) {
+        //use else if to have several condition
+      } else {
+        alert("Exactly!");
+      }
+
+      /*ternary - condition ? run this code : run this code inste*/
+      let age = prompt("age?", 18); // prompt "age?" with defualt of 18
+
+      let message =
+        age < 3 /*if age is less than 3
+       return message "Hi baby" if no continue to the next 
+       expression after next colon*/
+          ? "Hi, baby!"
+          : age < 18
+          ? "Hello!"
+          : age < 100
+          ? "Greetings!"
+          : "What an unusual age!";
+
+      alert(message);
+
+      let number = prompt("type a number");
+      /* prompt to type a number 
+          that identifies it if it is either 
+          greater or less than zero*/
+      if (number > 0) {
+        alert("value greater than zero");
+      } else if (number < 0) {
+        alert("value is less than zero");
+      } else {
+        alert("value equal to zero");
+      }
+
+      let result = a + b < 4 ? "Below" : "Over";
+
+      let a = 2 + 2; //switch example
+
+      switch (
+        a //compare a to case variants
+      ) {
+        case 3:
+          alert("Too small");
+          break;
+        case 4: //this is a match
+          alert("Exactly!");
+          break; /* always include breaks 
+          so the execution stops*/
+        case 5:
+          alert("Too big");
+          break;
+        default:
+          alert("I don't know such values");
+      }
+
+      let arg = prompt("Enter a value?");
+      switch (arg) {
+        case "0":
+        case "1":
+          alert("One or zero");
+          break;
+
+        case "2":
+          alert("Two");
+          break;
+
+        case 3:
+          alert("Never executes!");
+          break;
+        default:
+          alert("An unknown value");
+      }
+
+      switch (
+        browser //switch statement version
+      ) {
+        case "Edge":
+          alert("You've got the Edge!");
+          break;
+
+        case "Chrome":
+        case "Firefox":
+        case "Safari":
+        case "Opera":
+          alert("Okay we support these browsers too");
+          break;
+
+        default:
+          alert("We hope that this page looks ok!");
+      }
+
+      if (browser == "Edge") {
+        // if version
+        alert("You've got the Edge!");
+      } else if (
+        browser == "Chrome" ||
+        browser == "Firefox" ||
+        browser == "Safari" ||
+        browser == "Opera"
+      ) {
+        alert("Okay we support these browsers too");
+      } else {
+        alert("We hope that this page looks ok!");
+      }
+    </script>
+  </body>
+</html>
