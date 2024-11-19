@@ -34,3 +34,13 @@ createForm(..) // creates a form (and usually returns it)
 checkPermission(..) // checks a permission, returns true/false
 
 function expressions
+
+// Function Declaration
+function sum(a, b) {
+return a + b;
+}
+
+// Function Expression
+let sum = function(a, b) {
+return a + b;
+};
