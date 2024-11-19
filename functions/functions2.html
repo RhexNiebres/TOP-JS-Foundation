@@ -106,6 +106,21 @@
         alert("Showing you the movie"); // (*)
         // ...
       }
+
+      let age = prompt("What is your age?", 18); /*example of 
+      making a function declaration be visible outside of the 
+      block scope*/
+
+      let welcome =
+        age < 18 // assign welcome to the variable
+          ? function () {
+              alert("Hello!");
+            }
+          : function () {
+              alert("Greetings!");
+            };
+
+      welcome(); // ok now
     </script>
   </body>
 </html>
