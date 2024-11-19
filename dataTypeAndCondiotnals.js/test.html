@@ -65,12 +65,47 @@
       alert(userName5); // John, unchanged, the function did not access the outer variable
 
       function showMessage(from, text) {
+        // Parameters
         // parameters: from, text
         alert(from + ": " + text);
       }
 
       showMessage("Ann", "Hello!"); // Ann: Hello! (*)
       showMessage("Ann", "What's up?"); // Ann: What's up? (**)
+
+      function showMessage(from, text) {
+        //another exmample
+
+        from = "*" + from + "*"; // make "from" look nicer
+
+        alert(from + ": " + text);
+      }
+
+      let from = "Ann";
+
+      showMessage(from, "Hello"); // *Ann*: Hello
+
+      // the value of "from" is the same, the function modified a local copy
+      alert(from); // Ann
+
+      function sum(a, b) {
+        //returning a value sample
+        return a + b;
+      }
+
+      let result = sum(1, 2);
+      alert(result); // 3
+
+      function showMovie(age) {
+        if (!checkAge(age)) {
+          //if checkAge return false wont proceed to alert
+          return; /* use return  w/o value for 
+            function to exit immediately*/
+        }
+
+        alert("Showing you the movie"); // (*)
+        // ...
+      }
     </script>
   </body>
 </html>
