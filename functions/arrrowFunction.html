@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let sum = (a, b) => a + b;
+
+      /* This arrow function is a shorter form of:
+
+            let sum = function(a, b) {
+            return a + b;
+            };
+            */
+
+      alert(sum(1, 2)); // 3
+
+      //if one argument only remove parentheses around parameters
+      let double = (n) => n * 2;
+      // roughly the same as: let double = function(n) { return n * 2 }
+
+      alert(double(3)); // 6
+
+      let age = prompt("What is your age?", 18); //arrowFUntion in function expression form
+
+      let welcome =
+        age < 18 ? () => alert("Hello!") : () => alert("Greetings!");
+
+      welcome();
+
+      //mutiline arrow function example use this if there are many expressions
+      let sum1 = (a, b) => {
+        // the curly brace opens a multiline function
+        let result = a + b;
+        return result; // if we use curly braces, then we need an explicit "return"
+      };
+
+      alert(sum1(1, 2)); // 3
+    </script>
+  </body>
+</html>

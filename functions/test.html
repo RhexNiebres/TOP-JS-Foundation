@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // takes one number and returns that number + 7.
+      function add7(number) {
+        return number + 7;
+      }
+      console.log(add7(3));
+
+      //takes 2 number and return their product
+      function multiply(num1, num2) {
+        return num1 * num2;
+      }
+
+      console.log(multiply(2, 2));
+
+      // akes a string and returns that string with only the first letter capitalized.
+      function capitalize(str) {
+        if (str.lenght === 0) return str;
+        return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+      }
+
+      console.log(capitalize("hello, world!"));
+
+      // that takes a string and returns the very last letter of that string:
+      function lastLetter(str) {
+        if (str.lenght === 3) return str;
+        return str.charAt(3);
+      }
+
+      console.log(lastLetter("abcd"));
+    </script>
+  </body>
+</html>
